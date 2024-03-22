@@ -24,6 +24,16 @@ func TestEmailValidation(t *testing.T) {
 			email:    "test..mail@gmail.com",
 			expected: false,
 		},
+		{
+			name:     "without `.` in suffinx",
+			email:    "test@test",
+			expected: false,
+		},
+		{
+			name:     "without `@` symbol",
+			email:    "hello_mail",
+			expected: false,
+		},
 	}
 
 	for _, test := range tests {

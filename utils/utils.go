@@ -105,6 +105,10 @@ func suffStr(s string, index int) string {
 
 func isSuffix(s string) bool {
 	index := findLastChar(s, '.')
+	if index == -1 {
+		return false
+	}
+
 	pref := prefStr(s, index)
 	domain := suffStr(s, index)
 
@@ -122,6 +126,10 @@ func isSuffix(s string) bool {
 // IsEmail checks syntax of an email is valid or not based on some standards
 func IsEmail(s string) bool {
 	index := findLastChar(s, '@')
+	if index == -1 {
+		return false
+	}
+
 	pref := prefStr(s, index)
 	suff := suffStr(s, index)
 
