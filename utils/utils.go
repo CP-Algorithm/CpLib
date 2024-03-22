@@ -1,3 +1,7 @@
+/*
+ * Dedicated to MHM
+ */
+
 package utils
 
 func isLetter(ch byte) bool {

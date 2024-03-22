@@ -1,3 +1,7 @@
+/*
+ * Dedicated to MHM
+ */
+
 package math
 
 type Number interface {
