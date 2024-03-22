@@ -143,3 +143,18 @@ func IsEmail(s string) bool {
 
 	return true
 }
+
+func FibOfn(n int) uint64 {
+	if n <= 0 {
+		return 0
+	}
+
+	s := []uint64{}
+	s = append(s, 1)
+	s = append(s, 1)
+
+	for i := 0; i < n-2; i++ {
+		s = append(s, s[len(s)-1]+s[len(s)-2])
+	}
+	return s[n-1]
+}
